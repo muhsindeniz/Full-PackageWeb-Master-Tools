@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Image Comprassor - WWT</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/logo.png">
+    <!-- page css -->
+    <!-- Core css -->
+    <link href="assets/css/app.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+
+<body>
+    <div class="app">
+        <div class="layout">
+            <!-- Header START -->
+            <div class="header">
+                <div class="logo logo-dark d-flex justify-content-end align-items-center">
+                    <a href="index.html">
+                        <img src="assets/images/logo/logo.png" width="70" alt="Logo">
+                        <img class="logo-fold" src="assets/images/logo/logo-fold.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="logo logo-white">
+                    <a href="index.html">
+                        <img src="assets/images/logo/logo-white.png" alt="Logo">
+                        <img class="logo-fold" src="assets/images/logo/logo-fold-white.png" alt="Logo">
+                    </a>
+                </div>
+                <div class="nav-wrap">
+                    <ul class="nav-left">
+                        <li class="desktop-toggle">
+                            <a href="javascript:void(0);">
+                                <i class="anticon"></i>
+                            </a>
+                        </li>
+                        <li class="mobile-toggle">
+                            <a href="javascript:void(0);">
+                                <i class="anticon"></i>
+                            </a>
+                        </li>
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <!-- <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Webmaster Tools
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <span class="dropdown-item disabled"></span>
+                                            <a class="dropdown-item" href="#">Images Comprassor</a>
+                                        </div>
+                                    </li> -->
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">
+                                            Image Comprassor
+                                            <span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="image-cropper.html">
+                                            Image Cropper
+                                            <span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="youtube-mp3-and-mp4-converter.html">
+                                            Youtube Mp3 and Mp4 Converter
+                                            <span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="code-minifier.html">
+                                            HTML, CSS, javascript Minifier
+                                            <span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </ul>
+                    <ul class="nav-right">
+                        <!-- Buraya birşey ekenecek ?? -->
+                    </ul>
+                </div>
+            </div>
+            <!-- Header END -->
+
+            <!-- Side Nav START -->
+            <div class="side-nav">
+                <div class="side-nav-inner">
+                    <ul class="side-nav-menu scrollable">
+                        <li class="nav-item open">
+                            <a class="dropdown-toggle" href="#">
+                                <span class="icon-holder">
+                                    <i class="fas fa-home"></i>
+                                </span>
+                                <span class="title">Anasayfa</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item open">
+                            <a class="dropdown-toggle" href="#">
+                                <span class="icon-holder">
+                                    <i class="far fa-images"></i>
+                                </span>
+                                <span class="title">Image Compressor</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- Side Nav END -->
+
+            <!-- Page Container START -->
+            <div class="page-container">
+                <!-- Content Wrapper START -->
+                <div class="main-content container">
+                    <div id="app" class="col-sm-12">
+
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6">
+                                <div class="woody-web-tools-banner">
+                                    <img src="./assets/images/custom/banner.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="text-center m-t-10 m-b-40">
+                                    <h1 class="text-danger">JPG Image Compressor</h1>
+                                    <h4 class="w-45 m-h-auto m-b-30">Compress your Images files online & free</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="card bg-white mb-4 upload-image-border-dottet" @change="change"
+                                    @dragover="dragover" @drop="drop">
+                                    <label class="text-primary">
+                                        <div class="card-body">
+                                            <div class="pt-2 text-center jpg-compress-upload-title">
+                                                <div class="row">
+                                                    <div class="col-sm-12">
+                                                        <figure>
+                                                            <img src="./assets/images/custom/upload-btn.png" width="50"
+                                                                alt="">
+                                                        </figure>
+                                                    </div>
+                                                </div>
+                                                <p class="mb-0">Drop image here or browse...</p>
+                                                <p class="mb-0"><small>Drop your .jpg files here!</small></p>
+                                                <input type="file" class="sr-only" id="file" accept="image/*"
+                                                    ref="input">
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-auto">
+                                    <h4 class="card-header">Quality options</h4>
+                                    <div class="card-body">
+                                        <div class="form-group row">
+                                            <label for="inputQuality" class="col-5 col-form-label">Quality</label>
+                                            <div class="col-7">
+                                                <select class="form-control" name="quality" id="inputQuality"
+                                                    v-model.number="options.quality">
+                                                    <option value="0">0</option>
+                                                    <option value="0.1">0.1</option>
+                                                    <option value="0.2">0.2</option>
+                                                    <option value="0.3">0.3</option>
+                                                    <option value="0.4">0.4</option>
+                                                    <option value="0.5">0.5</option>
+                                                    <option value="0.6">0.6</option>
+                                                    <option value="0.7">0.7</option>
+                                                    <option value="0.8">0.8</option>
+                                                    <option value="0.9">0.9</option>
+                                                    <option value="1">1</option>
+                                                    <option value="">NaN</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card" v-if="inputURL && outputURL">
+                                    <h4 class="card-header">Comparing images</h4>
+                                    <div class="card-body d-flex justify-content-center align-items-center">
+                                        <vue-compare-image v-if="inputURL && outputURL" :left-image="inputURL"
+                                            :left-image-alt="input.name" left-label="Input image"
+                                            :right-image="outputURL" :right-image-alt="output.name"
+                                            right-label="Output image"></vue-compare-image>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+                                <div class="card mb-4">
+                                    <h5 class="card-header d-flex align-items-center justify-content-between">
+                                        <span>Input image <small class="text-secondary">(original image)</small></span>
+                                    </h5>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4 d-flex mb-3">
+                                                <div class="w-100 text-center" v-if="inputURL">
+                                                    <img class="mw-100" :src="inputURL" :alt="input.name">
+                                                </div>
+                                                <div v-else class="w-100 bg-light"></div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <dl class="row">
+                                                    <dt class="col-5">lastModified:</dt>
+                                                    <dd class="col-7">{{ input.lastModified || 'N/A' }}</dd>
+                                                    <dt class="col-5">name:</dt>
+                                                    <dd class="col-7">{{ input.name || 'N/A' }}</dd>
+                                                    <dt class="col-5">type:</dt>
+                                                    <dd class="col-7">{{ input.type || 'N/A' }}</dd>
+                                                    <dt class="col-5">size:</dt>
+                                                    <dd class="col-7">{{ input.size | prettySize }}</dd>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <h5 class="card-header d-flex align-items-center justify-content-between">
+                                        <span>Output image <small class="text-secondary">(compressed
+                                                image)</small></span>
+                                    </h5>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-4 d-flex mb-3">
+                                                <div class="w-100 text-center" v-if="outputURL">
+                                                    <img class="mw-100" :src="outputURL" :alt="output.name">
+                                                </div>
+                                                <div v-else class="w-100 bg-light"></div>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <dl class="row">
+                                                    <dt class="col-5">lastModified:</dt>
+                                                    <dd class="col-7">{{ output.lastModified || 'N/A' }}</dd>
+                                                    <dt class="col-5">name:</dt>
+                                                    <dd class="col-7">{{ output.name || 'N/A' }}</dd>
+                                                    <dt class="col-5">type:</dt>
+                                                    <dd class="col-7">{{ output.type || 'N/A' }}</dd>
+                                                    <dt class="col-5">size:</dt>
+                                                    <dd class="col-7">{{ output.size | prettySize }}
+                                                        <span v-if="output.size">({{ ((1 - (output.size / input.size)) *
+                                                            100).toFixed(2) }}% off)</span>
+                                                    </dd>
+                                                </dl>
+                                            </div>
+                                            <a class="btn w-100 p-3 mt-4 btn-sm btn-blocks btn-primary"
+                                                :download="output.name" :href="outputURL"
+                                                title="Download the compressed image">Download Image</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Content Wrapper END -->
+
+                   
+                </div>
+                 <!-- Footer START -->
+                 <footer class="footer">
+                    <div class="footer-content">
+                        <p class="m-b-0">Copyright © <script>document.write(new Date().getFullYear())</script> Muhsin Deniz. All rights reserved.</p>
+                        <span>
+                            <a href="#" class="text-gray m-r-15">Term &amp; Conditions</a>
+                            <a href="#" class="text-gray">Privacy &amp; Policy</a>
+                        </span>
+                    </div>
+                </footer>
+                <!-- Footer END -->
+            </div>
+            <!-- Page Container END -->
+        </div>
+    </div>
+
+    <!-- Core Vendors JS -->
+    <script src="assets/js/vendors.min.js"></script>
+    <!-- page js -->
+    <script src="assets/vendors/chartjs/Chart.min.js"></script>
+    <script src="assets/js/pages/dashboard-default.js"></script>
+    <!-- Core JS -->
+    <script src="assets/js/app.min.js"></script>
+    <!-- JPG Compressor JS -->
+    <script src="./assets/js/compressor/compressor.js"></script>
+    <script src="./assets/js/compressor/main.js"></script>
+    <script src="https://unpkg.com/jquery@3/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@2/dist/vue.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue-compare-image@0.2/dist/vueCompareImage.umd.min.js"
+        crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>

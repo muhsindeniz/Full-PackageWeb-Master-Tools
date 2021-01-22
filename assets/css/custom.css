@@ -1,0 +1,78 @@
+@media only screen and (max-width: 1440px) and (min-width: 992px) {
+    .page-container {
+        padding-left: 0 !important;
+    }
+}
+
+.page-container {
+    padding-left: 0 !important;
+}
+
+.side-nav {
+    display: none;
+}
+
+.nav-wrap .nav-left .desktop-toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 991px) {
+    .side-nav {
+        display: block;
+    }
+}
+
+.header .nav-wrap .nav-left li > a,
+.header .nav-wrap .nav-left li nz-dropdown > a,
+.header .nav-wrap .nav-right li > a,
+.header .nav-wrap .nav-right li nz-dropdown > a {
+    font-size: 16px !important;
+}
+
+.vci-container {
+    width: 100% !important;
+}
+
+.upload-image-border-dottet {
+    border: dashed 2px #444;
+}
+
+.jpg-compress-upload-title p {
+    font-size: 18px !important;
+    color: #444;
+    font-weight: bold;
+}
+
+.jpg-compress-upload-title {
+    cursor: pointer;
+}
+
+.woody-web-tools-banner img {
+    max-width: 510px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card{
+    box-shadow: 0.3px 2px 6px 0.5px #f0f0f0 !important;
+}
+
+.code-conpress-input, .code-conpress-input textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    height: 350px;
+}
+
+.code-conpress-output, .code-conpress-output textarea{
+    width: 100%;
+    outline: none;
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    height: 350px;
+}
