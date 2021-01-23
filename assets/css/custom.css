@@ -65,6 +65,7 @@
     padding: 10px 15px;
     border-radius: 6px;
     height: 350px;
+    resize: none;
 }
 
 .code-conpress-output, .code-conpress-output textarea{

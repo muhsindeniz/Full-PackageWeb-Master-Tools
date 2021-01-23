@@ -138,7 +138,7 @@
                         <div class="row">
                             <div class="col-sm-12 col-md-6">
                                 <div class="woody-web-tools-banner">
-                                    <img src="./assets/images/custom/woody-minify.png" alt="">
+                                    <img src="./assets/images/custom/woody-strong.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -146,41 +146,34 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="text-center m-t-10 m-b-40">
-                                    <h1 class="text-danger">HTML, CSS, Javascript Minifier/Maxifier</h1>
-                                    <p class="w-100 m-h-auto m-b-30"><strong>Do you want to optimize your Html, Css and
-                                            Javascript codes?</strong> <br> A free online editor that allows to compress
-                                        codes in the best way or to unzip codes.</p>
+                                    <h1 class="text-danger">MD5 Hash Generator</h1>
+                                    <p class="w-100 m-h-auto m-b-30"><strong>What is an MD5 hash?</strong> <br>The Md5 algorithm is an algorithm that provides the creation of a unique "fingerprint" of the given file or message (password) based on "hash" functions.</p>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row d-flex justify-content-center">
-                            <div class="col-sm-12 col-md-6">
-                                <h2>Input Code</h2>
+                            <div class="col-sm-12">
+                                <h3>Use this generator to create an MD5 hash of a string:</h3>
                                 <div class="card">
                                     <div class="card-body p-0 code-conpress-input">
-                                        <textarea></textarea>
+                                        <textarea id="hashInput"></textarea>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <h2>Output Code</h2>
-                                <div class="card">
-                                    <div class="card-body p-0 code-conpress-output">
-                                        <textarea></textarea>
-                                    </div>
+                                <div class="col-sm-12">
+                                    <button class="btn btn-success m-r-5 mb-3" onclick="generate()"><i
+                                            class="anticon anticon-code"></i> MD5 Generate</button>
+                                    <button class="btn btn-success m-r-5 mb-3" onclick="sh1Generate()"><i
+                                            class="anticon anticon-code"></i> SHA1 Generate</button>
+                                    <button class="btn btn-success m-r-5 mb-3" onclick="sh256Generate()"><i
+                                            class="anticon anticon-code"></i> SHA3 Generate</button>
+                                    <button class="btn btn-success m-r-5 mb-3" onclick="sh3Generate()"><i
+                                            class="anticon anticon-code"></i> SHA512 Generate</button>
+                                    <button class="btn btn-success m-r-5 mb-3" onclick="sh512Generate()"><i
+                                            class="anticon anticon-code"></i> SHA512 Generate</button>
+                                    <button class="btn btn-success m-r-5 mb-3" onclick="ripemd160Generate()"><i
+                                            class="anticon anticon-code"></i> RIPEMD160 Generate</button>
                                 </div>
-                            </div>
-
-                            <div class="col-sm-12 col-lg-6">
-                                <button class="btn btn-primary m-r-5 mb-3">Minify HTML</button>
-                                <button class="btn btn-primary m-r-5 mb-3">Minify CSS</button>
-                                <button class="btn btn-primary m-r-5 mb-3">Minify JS</button>
-                            </div>
-                            <div class="col-sm-12 col-lg-6">
-                                <button class="btn btn-primary m-r-5 mb-3">CLEAR ALL</button>
-                                <button class="btn btn-primary m-r-5 mb-3">Select All</button>
-                                <button class="btn btn-primary m-r-5 mb-3">Copy to Clipboard</button>
                             </div>
                         </div>
                     </div>
@@ -215,5 +208,7 @@
     <script src="assets/js/app.min.js"></script>
     <!-- Sweet Alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <!-- Minify Js -->
-    <script src="./assets/js/codeMinify/codes-minify.js"></script>
+    <!-- MD5 Hash Js -->
+    <script src="./assets/js/cryptology/crypto-js.min.js"></script>
+    <script src="./assets/js/cryptology/hashGenerator.js"></script>
+    
